@@ -45,21 +45,19 @@ export default function save( { attributes, className } ) {
 	} );
 
 	return (
-		<>
-			{ text && (
-				<div { ...useBlockProps.save( { className: wrapperClasses } ) }>
-					<RichText.Content
-						tagName="a"
-						className={ buttonClasses }
-						href={ url }
-						title={ title }
-						style={ buttonStyle }
-						value={ text }
-						target={ linkTarget }
-						rel={ rel }
-					/>
-				</div>
-			) }
-		</>
+		text && (
+			<div { ...useBlockProps.save( { className: wrapperClasses } ) }>
+				<RichText.Content
+					tagName="a"
+					className={ buttonClasses }
+					href={ url }
+					title={ title }
+					style={ buttonStyle }
+					value={ text }
+					target={ linkTarget }
+					rel={ rel }
+				/>
+			</div>
+		)
 	);
 }
